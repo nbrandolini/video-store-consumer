@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-
 import Search from './Search';
 import Movie from './Movie';
 
@@ -14,14 +13,14 @@ class SearchResults extends Component {
     }
   }
 
-  movieSearch = (title) => {
-    const THMD_URL = `https://api.themoviedb.org/3/search/movie?api_key=1108a394810c51779d4449631b00f9d2&query=${title}`
+  movieSearch = (movie) => {
 
-    axios.get(THMD_URL)
+
+    axios.get(`http://localhost:3001/movies?query=${movie}`)
     .then( (response) => {
-      console.log( response.data.results );
+      console.log( response.data );
       this.setState({
-        results: response.data.results
+        results: response.data
       });
     } )
     .catch( (error) => {
@@ -39,10 +38,11 @@ class SearchResults extends Component {
       return (
         <Movie
           key={index}
+          id={movie.id}
           title={movie.title}
+          image={movie.image_url}
           overview={movie.overview}
           release_date={movie.release_date}
-          poster_path={movie.poster_path}
         />
       );
     });
