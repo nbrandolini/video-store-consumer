@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import Search from './Search'
-import Movie from './Movie'
+
+import Search from './Search';
+import Movie from './Movie';
 
 class SearchResults extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       results: [],
     }
   }
 
-  componentDidMount = () => {
-    const THMD_URL = `https://api.themoviedb.org/3/search/movie?
-    api_key=1108a394810c51779d4449631b00f9d2&query=${query_from_search_form}`
+  movieSearch = (title) => {
+    const THMD_URL = `https://api.themoviedb.org/3/search/movie?api_key=1108a394810c51779d4449631b00f9d2&query=${title}`
 
     axios.get(THMD_URL)
     .then( (response) => {
-      console.log( response.data );
+      console.log( response.data.results );
       this.setState({
-        results: response.data
+        results: response.data.results
       });
     } )
     .catch( (error) => {
@@ -41,7 +41,7 @@ class SearchResults extends Component {
           key={index}
           title={movie.title}
           overview={movie.overview}
-          release_date={movie.relase_date}
+          release_date={movie.release_date}
           poster_path={movie.poster_path}
         />
       );
@@ -57,7 +57,7 @@ class SearchResults extends Component {
         {this.state.message ? this.state.message: ""  }
       </header>
         {this.renderResultsList()}
-        < Search addMovieCallback={this.query} />
+        <Search searchByTitle={this.movieSearch}/>
       </section>
     )
   }

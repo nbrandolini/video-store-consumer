@@ -9,8 +9,8 @@ class Movie extends Component {
       <article>
          <h3>Title {this.props.title} </h3>
          <p><strong>Overview: </strong> {this.props.overview}</p>
-         <p><strong>Release Date: </strong> {this.props.relase_date}</p>
-         <img src={this.props.poster_path}/>
+         <p><strong>Release Date: </strong> {this.props.release_date}</p>
+         <img src={this.props.poster_path} alt='Movie Poster'/>
       </article>
     )
   }
@@ -19,6 +19,8 @@ class Movie extends Component {
 Movie.propTypes = {
   title: PropTypes.string.isRequired,
   overview:  PropTypes.string.isRequired,
-  relase_date: PropTypes.string.isRequired,
+  release_date: PropTypes.string.isRequired,
   poster_path: PropTypes.string.isRequired,
 };
+
+export default Movie

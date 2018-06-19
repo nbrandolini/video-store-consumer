@@ -37,11 +37,16 @@ class Search extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
+    console.log(this.state.title);
     if (this.valid()) {
-      this.props.addMovieCallback(this.state.title);
+      this.props.searchByTitle(this.state.title);
       this.clearForm();
     }
   }
+
+  static propTypes = {
+    searchByTitle: PropTypes.func.isRequired
+  };
 
   render() {
     return (
@@ -53,7 +58,7 @@ class Search extends Component {
             value={this.state.title}
             onChange={this.onFieldChange}
             type="text"
-            id="title"
+          
             />
         </div>
         <input type="submit" value="Search" />
@@ -63,8 +68,6 @@ class Search extends Component {
 
 }
 
-Search.propTypes = {
-  addMovieCallback: PropTypes.func.isRequired,
-};
+
 
 export default Search;
