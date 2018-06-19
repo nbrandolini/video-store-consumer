@@ -34,6 +34,7 @@ class Library extends Component {
         title={movie.title}
         overview={movie.overview}
         release_date={movie.release_date}
+        selectedMovieCallback={this.props.selectedMovieCallback }
         />
 
       );
@@ -50,6 +51,7 @@ class Library extends Component {
       </section>
     );
   }
+
 }
 
 export default Library;

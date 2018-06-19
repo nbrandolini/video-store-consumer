@@ -12,6 +12,18 @@ import Library from './components/Library';
 import Customers from './components/Customers';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      selectedMovie: ' ',
+    };
+  }
+
+  setSelectedMovie = (title) => {
+    this.setState({
+      selectedMovie: title,
+    });
+  };
 
   render() {
 
@@ -28,6 +40,7 @@ class App extends Component {
         <li><Link to="/search">SearchResults</Link></li>
         <li><Link to="/customers">Customers</Link></li>
         <li><Link to="/library">Library</Link></li>
+        <li>selectedMovie: {this.state.selectedMovie}</li>
         </ul>
 
         <hr/>
@@ -35,7 +48,10 @@ class App extends Component {
         <Route exact path="/" component={home}/>
         <Route path="/search" component={SearchResults}/>
         <Route path="/customers" component={Customers}/>
-        <Route path="/library" component={Library}/>
+        <Route path="/library"
+     render={(props) => <Library {...props} selectedMovieCallback={this.setSelectedMovie} />}
+
+     />
         </section>
       </Router>
 

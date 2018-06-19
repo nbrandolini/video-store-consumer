@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 
 class Movie extends Component {
 
+  selectedMovieCallback = () => {
+    this.props.selectedMovieCallback(this.props.title)
+  };
+
   render() {
     console.log('Rendering...');
     return (
@@ -11,6 +15,7 @@ class Movie extends Component {
          <p><strong>Overview: </strong> {this.props.overview}</p>
          <p><strong>Release Date: </strong> {this.props.release_date}</p>
          <img src={this.props.image_url} alt='Movie Poster'/>
+         <button onClick={this.selectedMovieCallback}>Select This Movie </button>
       </article>
     );
   }
@@ -21,6 +26,7 @@ Movie.propTypes = {
   overview:  PropTypes.string.isRequired,
   release_date: PropTypes.string.isRequired,
   image_url: PropTypes.string.isRequired,
+  selectedMovieCallback: PropTypes.func.isRequired,
 };
 
 export default Movie;
