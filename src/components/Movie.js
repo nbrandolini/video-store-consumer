@@ -13,7 +13,7 @@ class Movie extends Component {
          <p><strong>Release Date: </strong> {this.props.release_date}</p>
          <img src={imgURL} alt='Movie Poster'/>
       </article>
-    )
+    );
   }
 }
 
