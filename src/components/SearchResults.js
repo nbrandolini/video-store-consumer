@@ -10,7 +10,7 @@ class SearchResults extends Component {
 
     this.state = {
       results: [],
-    }
+    };
   }
 
   movieSearch = (movie) => {
@@ -21,15 +21,15 @@ class SearchResults extends Component {
       this.setState({
         results: response.data
       });
-    } )
-    .catch( (error) => {
+    })
+    .catch((error) => {
       console.log("got to the error");
       console.log(error);
       this.setState({
         error: error.message
       });
-    } );
-  }
+    });
+  };
 
   renderResultsList = () => {
     console.log('Rendering results');
@@ -47,22 +47,22 @@ class SearchResults extends Component {
     });
 
     return componentList;
-  }
+  };
 
   render() {
     return (
       <section>
       <header>
-        {this.state.message ? this.state.message: ""  }
+        { this.state.message ? this.state.message: ''  }
       </header>
         {this.renderResultsList()}
         <Search searchByTitle={this.movieSearch}/>
       </section>
-    )
+    );
   }
 
 }
 
-SearchResults.propTypes = {}
+SearchResults.propTypes = {};
 
 export default SearchResults;

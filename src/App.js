@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import SearchResults from './components/SearchResults';
-
+import Library from './components/Library';
 import Customers from './components/Customers';
 
 class App extends Component {
@@ -27,6 +27,7 @@ class App extends Component {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/search">SearchResults</Link></li>
         <li><Link to="/customers">Customers</Link></li>
+        <li><Link to="/library">Library</Link></li>
         </ul>
 
         <hr/>
@@ -34,6 +35,7 @@ class App extends Component {
         <Route exact path="/" component={home}/>
         <Route path="/search" component={SearchResults}/>
         <Route path="/customers" component={Customers}/>
+        <Route path="/library" component={Library}/>
         </section>
       </Router>
 
