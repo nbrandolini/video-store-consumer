@@ -11,7 +11,7 @@ class Search extends Component {
       overview:  '',
       relase_date: '',
       poster_path: '',
-    }
+    };
   }
 
   onFieldChange = (event) => {
@@ -20,11 +20,11 @@ class Search extends Component {
     const updateState = {};
     updateState[fieldName] = fieldValue;
     this.setState(updateState);
-  }
+  };
 
   valid = () => {
     return this.state.title.length > 0;
-  }
+  };
 
   clearForm = () => {
     this.setState({
@@ -33,7 +33,7 @@ class Search extends Component {
       relase_date: '',
       poster_path: '',
     });
-  }
+  };
 
   onFormSubmit = (event) => {
     event.preventDefault();
@@ -42,7 +42,7 @@ class Search extends Component {
       this.props.searchByTitle(this.state.title);
       this.clearForm();
     }
-  }
+  };
 
   static propTypes = {
     searchByTitle: PropTypes.func.isRequired
@@ -58,16 +58,13 @@ class Search extends Component {
             value={this.state.title}
             onChange={this.onFieldChange}
             type="text"
-          
+
             />
         </div>
         <input type="submit" value="Search" />
       </form>
     );
   }
-
 }
-
-
 
 export default Search;
