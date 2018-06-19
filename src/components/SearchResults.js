@@ -15,8 +15,7 @@ class SearchResults extends Component {
 
   movieSearch = (movie) => {
 
-
-    axios.get(`http://localhost:3001/movies?query=${movie}`)
+    axios.get(`http://localhost:3000/movies?query=${movie}`)
     .then( (response) => {
       console.log( response.data );
       this.setState({

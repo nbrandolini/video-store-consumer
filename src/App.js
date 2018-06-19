@@ -22,19 +22,19 @@ class App extends Component {
     return (
 
       <Router>
-      <section>
-      <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/search">SearchResults</Link></li>
-      <li><Link to="/customers">Customers</Link></li>
-      </ul>
+        <section>
+        <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/search">SearchResults</Link></li>
+        <li><Link to="/customers">Customers</Link></li>
+        </ul>
 
-      <hr/>
+        <hr/>
 
-      <Route exact path="/" component={home}/>
-      <Route path="/search" component={SearchResults}/>
-      <Route path="/customers" component={Customers}/>
-      </section>
+        <Route exact path="/" component={home}/>
+        <Route path="/search" component={SearchResults}/>
+        <Route path="/customers" component={Customers}/>
+        </section>
       </Router>
 
     );

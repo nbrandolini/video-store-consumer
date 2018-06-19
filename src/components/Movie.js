@@ -5,7 +5,7 @@ class Movie extends Component {
 
   render() {
     console.log('Rendering...');
-    let imgURL = `https://image.tmdb.org/t/p/w185${this.props.image_url}`
+    let imgURL = `https://image.tmdb.org/t/p/w185${this.props.image_url}`;
     return (
       <article>
          <h3>Title {this.props.title} </h3>
@@ -24,4 +24,4 @@ Movie.propTypes = {
   image_url: PropTypes.string.isRequired,
 };
 
-export default Movie
+export default Movie;
