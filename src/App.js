@@ -1,27 +1,41 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import axios from 'axios';
-// import {
-//    BrowserRouter as Router,
-//    Route,
-//    Link
-//  } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 import './App.css';
 import Search from './components/Search';
 import Customers from './components/Customers';
 
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to the Movie Store</h1>
-        </header>
-        <Search></Search>
 
-      </div>
+  render() {
+
+    const home = () => {
+      return (<p>Welcome!</p>);
+    };
+
+
+    return (
+      <Router>
+      <section>
+      <ul>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/search">Search</Link></li>
+      <li><Link to="/customers">Customers</Link></li>
+      </ul>
+
+      <hr/>
+
+      <Route exact path="/" component={home}/>
+      <Route path="/search" component={Search}/>
+      <Route path="/customers" component={Customers}/>
+      </section>
+      </Router>
     );
   }
 }
