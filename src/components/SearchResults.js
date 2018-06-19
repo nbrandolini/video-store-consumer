@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Search from './Search'
-import Video from './Video'
+import Movie from './Movie'
 
 class SearchResults extends Component {
   constructor() {
@@ -57,7 +57,7 @@ class SearchResults extends Component {
         {this.state.message ? this.state.message: ""  }
       </header>
         {this.renderResultsList()}
-        < Search addVideoCallback={this.query} />
+        < Search addMovieCallback={this.query} />
       </section>
     )
   }
