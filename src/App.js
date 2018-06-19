@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import axios from 'axios';
+// import {
+//    BrowserRouter as Router,
+//    Route,
+//    Link
+//  } from 'react-router-dom';
 import './App.css';
 import Search from './components/Search';
+import Customers from './components/Customers';
+
 
 class App extends Component {
   render() {
@@ -12,6 +20,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to the Movie Store</h1>
         </header>
         <Search></Search>
+
       </div>
     );
   }

@@ -8,7 +8,7 @@ class Search extends Component {
       <section>
         <p> Please fucking show on the page</p>
       </section>
-    )
+    );
   }
 
 }
