@@ -8,9 +8,6 @@ class Search extends Component {
 
     this.state = {
       title: '',
-      overview:  '',
-      relase_date: '',
-      poster_path: '',
     };
   }
 
@@ -29,9 +26,6 @@ class Search extends Component {
   clearForm = () => {
     this.setState({
       title: '',
-      overview:  '',
-      relase_date: '',
-      poster_path: '',
     });
   };
 

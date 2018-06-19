@@ -39,7 +39,7 @@ class SearchResults extends Component {
           key={index}
           id={movie.id}
           title={movie.title}
-          image={movie.image_url}
+          image_url={movie.image_url}
           overview={movie.overview}
           release_date={movie.release_date}
         />
