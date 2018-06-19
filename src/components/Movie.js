@@ -21,7 +21,7 @@ Movie.propTypes = {
   title: PropTypes.string.isRequired,
   overview:  PropTypes.string.isRequired,
   release_date: PropTypes.string.isRequired,
-  poster_path: PropTypes.string.isRequired,
+  image_url: PropTypes.string.isRequired,
 };
 
 export default Movie
