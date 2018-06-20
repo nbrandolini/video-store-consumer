@@ -17,13 +17,13 @@ class SearchResults extends Component {
 
     axios.get(`http://localhost:3000/movies?query=${movie}`)
     .then( (response) => {
-      console.log( response.data );
+      console.log(response.data);
       this.setState({
-        results: response.data
+        results: response.data,
       });
     })
     .catch((error) => {
-      console.log("got to the error");
+      console.log('got to the error');
       console.log(error);
       this.setState({
         error: error.message

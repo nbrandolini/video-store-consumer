@@ -25,6 +25,12 @@ class App extends Component {
     });
   };
 
+  setSelectedCustomer = (name) => {
+    this.setState({
+      selectedCustomer: name,
+    });
+  };
+
   render() {
 
     const home = () => {
@@ -34,25 +40,27 @@ class App extends Component {
     return (
 
       <Router>
-        <section>
+      <section>
         <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/search">SearchResults</Link></li>
-        <li><Link to="/customers">Customers</Link></li>
-        <li><Link to="/library">Library</Link></li>
-        <li>Selected Movie: {this.state.selectedMovie}</li>
+         <li><Link to="/">Home</Link></li>
+         <li><Link to="/search">SearchResults</Link></li>
+         <li><Link to="/customers">Customers</Link></li>
+         <li><Link to="/library">Library</Link></li>
+         <li>Selected Movie: {this.state.selectedMovie}</li>
+         <li>Selected Customer: {this.state.selectedCustomer}</li>
         </ul>
 
-        <hr/>
+      <hr/>
 
         <Route exact path="/" component={home}/>
         <Route path="/search" component={SearchResults}/>
-        <Route path="/customers" component={Customers}/>
         <Route path="/library"
-     render={(props) => <Library {...props} selectedMovieCallback={this.setSelectedMovie} />}
-
-     />
-        </section>
+          render={(props) => <Library {...props} selectedMovieCallback={this.setSelectedMovie} />}
+        />
+        <Route path="/customers"
+          render={(props) => <Customers {...props} selectedCustomerCallback={this.setSelectedCustomer} />}
+        />
+      </section>
       </Router>
 
     );
