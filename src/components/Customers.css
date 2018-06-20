@@ -1,0 +1,10 @@
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.customer {
+  display: flex;
+  flex-wrap: wrap;
+}

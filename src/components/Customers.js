@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Customer from './Customer.js'
+import './Customers.css';
 
 class Customers extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class Customers extends Component {
 
   render() {
     return (
-      <section className="customer-section">
+      <section className="customers">
       <h3>Customers List</h3>
       <ul>{this.renderCustomersList()}</ul>
       </section>
