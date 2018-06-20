@@ -40,7 +40,7 @@ class App extends Component {
         <li><Link to="/search">SearchResults</Link></li>
         <li><Link to="/customers">Customers</Link></li>
         <li><Link to="/library">Library</Link></li>
-        <li>selectedMovie: {this.state.selectedMovie}</li>
+        <li>Selected Movie: {this.state.selectedMovie}</li>
         </ul>
 
         <hr/>
