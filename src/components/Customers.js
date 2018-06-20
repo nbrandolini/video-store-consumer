@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import Customer from './Customer.js'
 import './Customers.css';
 
@@ -51,3 +52,9 @@ class Customers extends Component {
 }
 
 export default Customers;
+
+Customers.propTypes = {
+  checkedOutMoviesCount: PropTypes.func.isRequired,
+  selectedCustomerCallback: PropTypes.func.isRequired,
+
+};

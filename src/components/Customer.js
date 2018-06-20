@@ -11,7 +11,6 @@ class Customer extends Component {
   };
 
   render() {
-    console.log('some customer');
     return (
       <article className="customer">
         <h3>{this.props.name}</h3>
