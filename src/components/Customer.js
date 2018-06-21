@@ -14,6 +14,8 @@ class Customer extends Component {
     return (
       <article className="customer">
         <h3>{this.props.name}</h3>
+        <p>Phone: {this.props.phone}</p>
+        <p>Account Credit: ${this.props.accountCredit}</p>
         <p>Checked Out Movies Count: {this.props.checkedOutMoviesCount}</p>
         <button onClick={this.selectedCustomerCallback} >Select This Customer</button>
       </article>
@@ -28,4 +30,6 @@ Customer.propTypes = {
   selectedCustomerCallback: PropTypes.func.isRequired,
   checkedOutMoviesCount: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
+  phone: PropTypes.string.isRequired,
+  accountCredit: PropTypes.string.isRequired,
 };

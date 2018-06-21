@@ -80,10 +80,12 @@ class App extends Component {
       <li>Selected Movie: {this.state.selectedMovie}</li>
       <li>Selected Customer: {this.state.selectedCustomer}</li>
       <button className="button" onClick={this.createRental}>Create Rental</button>
-      {this.renderMessage()}
+
       </ul>
 
       <hr/>
+
+      {this.renderMessage()}
 
       <Route exact path="/" component={home}/>
       <Route path="/search" component={SearchResults}/>

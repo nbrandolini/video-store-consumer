@@ -22,24 +22,26 @@ class Customers extends Component {
     })
     .catch((error) => {
       console.log(error);
-      this.setState({ error: error.message });
+      this.setState({ message: error.message });
     });
   };
 
   renderCustomersList = () => {
-    const customersList = this.state.customersList.map((customer, index) => {
+    const customersList = this.state.customersList.map((customer) => {
       return (
         <Customer
-        key={index}
+        key={customer.id}
         id={customer.id}
         name={customer.name}
+        phone={customer.phone}
+        accountCredit={customer.account_credit}
         checkedOutMoviesCount={customer.movies_check_out_count}
         selectedCustomerCallback={this.props.selectedCustomerCallback}
         />
       );
     });
     return customersList;
-  }
+  };
 
   render() {
     return (
