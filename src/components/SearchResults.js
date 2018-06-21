@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Search from './Search';
-import Movie from './Movie';
+import TMDBMovie from './TMDBMovie';
 
 class SearchResults extends Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class SearchResults extends Component {
     console.log('Rendering results');
     const componentList = this.state.results.map((movie, index) => {
       return (
-        <Movie
+        <TMDBMovie
           key={index}
           id={movie.id}
           title={movie.title}
