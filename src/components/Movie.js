@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import './Movie.css';
 class Movie extends Component {
 
   selectedMovieCallback = () => {
@@ -10,7 +10,7 @@ class Movie extends Component {
   render() {
     console.log('Rendering...');
     return (
-      <article>
+      <article className='movie'>
          <h3>Title {this.props.title} </h3>
          <p><strong>Overview: </strong> {this.props.overview}</p>
          <p><strong>Release Date: </strong> {this.props.release_date}</p>

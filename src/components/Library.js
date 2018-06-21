@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Movie from './Movie';
+import './Library.css';
 
 class Library extends Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class Library extends Component {
 
   render() {
     return (
-      <section>
+      <section className='library'>
       <header><h2> Library </h2></header>
       <p>{this.state.error}</p>
       { this.renderMovieList()}
