@@ -52,6 +52,9 @@ class App extends Component {
       console.log(response);
       this.setState({
         message: 'Succesfully added a new rental!',
+        selectedMovie: '',
+        selectedCustomer: '',
+        selectedCustomerId: '',
       });
     })
     .catch((error) => {
