@@ -8,7 +8,7 @@ class Movie extends Component {
   };
 
   render() {
-    console.log('Rendering...');
+    console.log(this.props)
     return (
       <article>
          <h3>Title {this.props.title} </h3>
