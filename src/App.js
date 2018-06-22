@@ -65,38 +65,37 @@ class App extends Component {
   render() {
 
     const home = () => {
-      return (<p>Welcome!</p>);
+      return (<h1>Welcome!</h1>);
     };
 
     return (
-      <section >
-        <Router >
-          <section className='header'>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/search">SearchResults</Link></li>
-              <li><Link to="/customers">Customers</Link></li>
-              <li><Link to="/library">Library</Link></li>
-              <li>Selected Movie: {this.state.selectedMovie}</li>
-              <li>Selected Customer: {this.state.selectedCustomer}</li>
-              <button className="button" onClick={this.createRental}>Create Rental</button>
 
-            </ul>
+      <Router >
+        <section className=''>
+          <ul className='header'>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/search">SearchResults</Link></li>
+            <li><Link to="/customers">Customers</Link></li>
+            <li><Link to="/library">Library</Link></li>
+            <li>Selected Movie: {this.state.selectedMovie}</li>
+            <li>Selected Customer: {this.state.selectedCustomer}</li>
+            <button className="button" onClick={this.createRental}>Create Rental</button>
+          </ul>
 
-            {this.renderMessage()}
-            <section className='conent'>
-              <Route exact path="/" component={home} />
-              <Route path="/search" component={SearchResults}/>
-              <Route path="/library"
-                render={(props) => <Library {...props} selectedMovieCallback={this.setSelectedMovie} />}
-                />
-              <Route path="/customers"
-                render={(props) => <Customers {...props} selectedCustomerCallback={this.setSelectedCustomer} />}
-                />
-            </section>
+          {this.renderMessage()}
+          <section className='content'>
+            <Route exact path="/" component={home} />
+            <Route path="/search" component={SearchResults}/>
+            <Route path="/library"
+              render={(props) => <Library {...props} selectedMovieCallback={this.setSelectedMovie} />}
+              />
+            <Route path="/customers"
+              render={(props) => <Customers {...props} selectedCustomerCallback={this.setSelectedCustomer} />}
+              />
           </section>
-        </Router>
-      </section>
+        </section>
+      </Router>
+
     );
   }
 }

@@ -1,7 +1,7 @@
-/* .customer {
-  background-color: teal;
+.customer {
+  background-color: rgba(54, 70, 82, .3);
 
-  padding: 1em 0;
+  padding: 2em;
   margin: 0.5rem;
 
   min-height: 250px;
@@ -13,4 +13,4 @@
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   align-items: center;
-} */
+}

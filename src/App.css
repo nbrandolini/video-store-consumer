@@ -1,4 +1,4 @@
-html {
+/* html {
   height: 100%;
   background-size: cover;
 }
@@ -30,15 +30,71 @@ html {
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+} */
+
+/* body {
+  background: #B5BEC6 ;
 }
 
-body {
-  background-image: url('https://images.unsplash.com/photo-1493664543243-589b576c5bcd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9e9d42a8ed01242550a8784af1966b65&auto=format&fit=crop&w=800&q=60');
-  background-repeat: no-repeat;
+.header {
+  text-align: center;
 }
+
+.content */
 
 ul li {
   list-style-type: none;
-  display: flex;
 
+}
+
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: rgb(199, 219, 230);
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: brown;
+  font-size: 5em;
+  font-family: 'Rubik', sans-serif;
+  font-style: bold;
+}
+ h2, p, ul, li {
+  font-family: 'Rubik', sans-serif;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  background-color:  rgba(54, 70, 82, .5);
+  padding: 0;
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+.content {
+  background-color: rgb(199, 219, 230);
+
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+.active {
+  background-color: #0099FF;
 }

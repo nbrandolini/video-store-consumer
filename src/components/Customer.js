@@ -17,6 +17,7 @@ class Customer extends Component {
         <p>Phone: {this.props.phone}</p>
         <p>Account Credit: ${this.props.accountCredit}</p>
         <p>Checked Out Movies Count: {this.props.checkedOutMoviesCount}</p>
+        <br/>
         <button onClick={this.selectedCustomerCallback} >Select This Customer</button>
       </article>
     );

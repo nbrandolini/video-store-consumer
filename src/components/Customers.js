@@ -47,7 +47,7 @@ class Customers extends Component {
     return (
       <section className="customers">
       <h3>Customers List</h3>
-      <ul>{this.renderCustomersList()}</ul>
+      <ul><li>{this.renderCustomersList()}</li></ul>
       </section>
     );
   }
