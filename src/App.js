@@ -69,35 +69,34 @@ class App extends Component {
     };
 
     return (
+      <section >
+        <Router >
+          <section className='header'>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/search">SearchResults</Link></li>
+              <li><Link to="/customers">Customers</Link></li>
+              <li><Link to="/library">Library</Link></li>
+              <li>Selected Movie: {this.state.selectedMovie}</li>
+              <li>Selected Customer: {this.state.selectedCustomer}</li>
+              <button className="button" onClick={this.createRental}>Create Rental</button>
 
-      <Router>
-      <section>
-      <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/search">SearchResults</Link></li>
-      <li><Link to="/customers">Customers</Link></li>
-      <li><Link to="/library">Library</Link></li>
-      <li>Selected Movie: {this.state.selectedMovie}</li>
-      <li>Selected Customer: {this.state.selectedCustomer}</li>
-      <button className="button" onClick={this.createRental}>Create Rental</button>
+            </ul>
 
-      </ul>
-
-      <hr/>
-
-      {this.renderMessage()}
-
-      <Route exact path="/" component={home}/>
-      <Route path="/search" component={SearchResults}/>
-      <Route path="/library"
-      render={(props) => <Library {...props} selectedMovieCallback={this.setSelectedMovie} />}
-      />
-      <Route path="/customers"
-      render={(props) => <Customers {...props} selectedCustomerCallback={this.setSelectedCustomer} />}
-      />
+            {this.renderMessage()}
+            <section className='conent'>
+              <Route exact path="/" component={home} />
+              <Route path="/search" component={SearchResults}/>
+              <Route path="/library"
+                render={(props) => <Library {...props} selectedMovieCallback={this.setSelectedMovie} />}
+                />
+              <Route path="/customers"
+                render={(props) => <Customers {...props} selectedCustomerCallback={this.setSelectedCustomer} />}
+                />
+            </section>
+          </section>
+        </Router>
       </section>
-      </Router>
-
     );
   }
 }

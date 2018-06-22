@@ -1,3 +1,8 @@
+html {
+  height: 100%;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
 }
@@ -25,4 +30,14 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1493664543243-589b576c5bcd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9e9d42a8ed01242550a8784af1966b65&auto=format&fit=crop&w=800&q=60');
+  background-repeat: no-repeat;
+}
+
+ul li {
+  list-style-type: none;
+  display: flex;
 }
