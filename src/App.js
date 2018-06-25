@@ -51,7 +51,7 @@ class App extends Component {
     .then((response) => {
       console.log(response);
       this.setState({
-        message: 'Succesfully added a new rental!',
+        message: `${this.state.selectedCustomer} succesfully rchekcout ${this.state.selectedMovie}!`,
         selectedMovie: '',
         selectedCustomer: '',
         selectedCustomerId: '',

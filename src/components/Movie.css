@@ -7,8 +7,10 @@
   flex-basis: 18%;
 
   border-radius: 5px;
-  border: solid;
   padding: 2em;
   text-align: center;
-  background-color: rgb(240, 231, 237);
+  /* background-color: rgb(240, 231, 237); */
+  background-color: rgba(54, 70, 82, .3);
+  
+
 }

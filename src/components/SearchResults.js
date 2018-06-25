@@ -32,7 +32,7 @@ class SearchResults extends Component {
   };
 
   renderResultsList = () => {
-    console.log('Rendering results');
+    console.log(`Rendering results`);
     const componentList = this.state.results.map((movie, index) => {
       return (
         <TMDBMovie
